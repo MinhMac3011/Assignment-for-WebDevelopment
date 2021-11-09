@@ -1,0 +1,276 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ExamReg</title>
+
+    <link href="../css/boot 4/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/css1.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--<link href="../css/font-awesome.min.css" rel="stylesheet" />-->
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="margin-bottom:0;background-color:#7386D5">
+        <!-- Brand -->
+
+        <a class="navbar-brand" href="#">
+            <img src="../ref/74613723_2387267021490597_5129562252877234176_n.png" style="width:80px;height:40px;border:solid;border-radius:10%" />
+            <strong>ExamReg</strong>
+        </a>
+
+        
+        <ul class="navbar-nav " style="margin-left:82%">
+            
+            <!-- Dropdown User -->
+            <li class="nav-item dropleft">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                    User
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">
+                        <i class="fa fa-user-o" aria-hidden="true"></i>
+                        My account
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                        Account Setting
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                        Logout
+                    </a>
+                </div>
+            </li>
+        </ul>
+
+
+    </nav>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Menu</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+
+                <li>
+                    <a href="#" onclick="openTab('home'); closeTab('about','exam','studentList','setting','studentInfo')">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="openTab('about'); closeTab('home','exam','studentList','setting','studentInfo')">
+                        <i class="fa fa-book" aria-hidden="true"></i>
+                        About
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" class="dropdown-toggle">
+                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                        Student
+                    </a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#" onclick="openTab('studentList'); closeTab('home','about','studentInfo','setting','exam')">
+                                <i class="fa fa-th-list" aria-hidden="true"></i>
+                                Student List
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="openTab('studentInfo'); closeTab('home','about','studentList','setting','exam')">
+                                <i class="fa fa-address-card-o" aria-hidden="true"></i>
+                                Information Register
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="openTab('exam'); closeTab('home','studentList','about','setting','studentInfo')">
+                        <i class="fa fa-file-text" aria-hidden="true"></i>
+                        Exam
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="openTab('setting'); closeTab('home','exam','studentList','about','studentInfo')">
+                        <i class="fa fa-cogs" aria-hidden="true"></i>
+                        Setting
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                        <span>Toggle Menu</span>
+                    </button>
+
+
+                </div>
+            </nav>
+
+            <div id="home" style="display:none">
+                <h2 style="margin-top: 40px">Trang chủ</h2>
+
+                <div id="home-content">
+
+                    <div class="row" style="margin-bottom:30px">
+                        <div class="col-sm-6">
+                            <img class="card-img" src="../ref/college-students-600x400-600x400.jpg" />
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Special title treatment</h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <img class="card-img" src="../ref/exam-624x415.jpg" />
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Special title treatment</h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" >
+                        <div class="col-sm-6">
+                            <img class="card-img" src="../ref/istockphoto-1029101766-1024x1024.jpg" />
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Special title treatment</h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <img class="card-img" src="../ref/37553632_148949625981408_3684386778036305920_n.jpg" />
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Special title treatment</h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="about" style="display:none">
+                <h2 style="margin-top: 40px">Giới thiệu về hệ thống ExamReg của ABCUni</h2>
+
+                <p>
+                    Trường đại học ABC (ABCUni) tổ chức thi kết thúc học phần bằng hình thức thi trắc nghiệm trên máy tính. Để tạo điều kiện tốt nhất cho thí sinh, ABCUni cho phép sinh viên tự đăng ký dự thi. Theo đó, ABCUni sẽ lập lịch cho các kỳ thi và ca thi trước, sinh viên đã học học phần nào sẽ được quyền đăng ký dự thi học phần đó tại ca thi phù hợp. Mỗi kỳ thi có nhiều ca thi. Mỗi ca thi có nhiều phòng thi. Mỗi phòng thi có số lượng máy tính xác định. Số lượng thí sinh có thể thi cùng ca thi bị giới hạn, không được vượt quá tổng số máy tính của các phòng thi trong ca thi. Khi ca thi đã đủ số lượng thí sinh đăng ký thì các thí sinh khác không thể đăng ký vào ca thi nữa.
+                    Sinh viên đăng nhập vào phần mềm ExamReg mà ở đó đã có thông tin cá nhân sinh viên (do quản trị viên đưa vào CSDL trên cơ sở danh sách lớp học phần được các đơn vị đào tạo gửi) và CHỌN lịch thi của học phần sinh viên cần đăng ký dự thi. Trong lịch thi đó có thông tin điểm thi, các ca thi, các phòng thi của ca thi, số chỗ thi và có chức năng cho sinh viên chọn ca thi họ muốn dự thi. Sau khi sinh viên chọn xong thì lịch thi sinh viên đăng ký được xuất ra ở dạng báo cáo có tên gọi là PHIẾU BÁO DỰ THI và sinh viên download được/in được. Bản in, bản download đều có giá trị là minh chứng cho việc sinh viên đăng ký dự thi thành công. SV sử dụng phiếu báo dự thi này để đi thi.
+                </p>
+            </div>
+
+            <div id="exam" style="display:none">
+                <h2 style="margin-top: 40px">Exam</h2>
+
+            </div>
+
+            <div id="studentList" style="display:none">
+                <h2 style="margin-top: 40px">Student List</h2>
+                <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Last Name</th>
+                            <th>First Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Mac</td>
+                            <td>Dinh Minh</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Nguyen</td>
+                            <td>Dinh Nhat Minh</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Pham</td>
+                            <td>Hoang Nam</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="studentInfo" style="display:none">
+                <h2 style="margin-top: 40px">Student Information</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox"> Remember me</label>
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div>
+
+            <div id="setting" style="display:none">
+                <h2 style="margin-top: 40px">Setting</h2>
+
+            </div>
+
+            
+        </div>
+    </div>
+
+
+    <script src="../script/popper.min.js"></script>
+    <script src="../script/jquery-3.3.1.slim.min.js"></script>
+    <script src="../script/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+
+    <script>
+        function openTab(tab) {
+            document.getElementById(tab).style.display = "block"
+        }
+        function closeTab(tab1,tab2,tab3,tab4,tab5) {
+            document.getElementById(tab1).style.display = "none";
+            document.getElementById(tab2).style.display = "none";
+            document.getElementById(tab3).style.display = "none";
+            document.getElementById(tab4).style.display = "none";
+            document.getElementById(tab5).style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
